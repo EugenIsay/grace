@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\makeorderwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\makeorderwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\makeorderwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\makeorderwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\addclient.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\addclient.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\addclient.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\addclient.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|c:\\users\\zheka\\desktop\\projects\\grace\\grace\\grace\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E7B5FB6-5F40-4388-8B93-9EB2AC408085}|grace\\grace.csproj|solutionrelative:grace\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MakeOrderWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\MakeOrderWindow.axaml",
+              "RelativeDocumentMoniker": "grace\\MakeOrderWindow.axaml",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\MakeOrderWindow.axaml",
+              "RelativeToolTip": "grace\\MakeOrderWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-04T19:21:22.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Program.cs",
+              "RelativeDocumentMoniker": "grace\\Program.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Program.cs",
+              "RelativeToolTip": "grace\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T18:56:50.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Actions.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Actions.cs",
+              "RelativeDocumentMoniker": "grace\\Actions.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Actions.cs",
+              "RelativeToolTip": "grace\\Actions.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAASwCIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T18:17:02.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MakeOrderWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\MakeOrderWindow.axaml.cs",
+              "RelativeDocumentMoniker": "grace\\MakeOrderWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\MakeOrderWindow.axaml.cs",
+              "RelativeToolTip": "grace\\MakeOrderWindow.axaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAiwEkAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T17:51:37.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Models\\User.cs",
+              "RelativeDocumentMoniker": "grace\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Models\\User.cs",
+              "RelativeToolTip": "grace\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T17:26:07.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "grace\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\Models\\Service.cs",
+              "RelativeToolTip": "grace\\Models\\Service.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T17:25:53.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddClient.axaml",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\AddClient.axaml",
+              "RelativeDocumentMoniker": "grace\\AddClient.axaml",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\AddClient.axaml",
+              "RelativeToolTip": "grace\\AddClient.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-04T16:10:52.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddClient.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\AddClient.axaml.cs",
+              "RelativeDocumentMoniker": "grace\\AddClient.axaml.cs",
+              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\Grace\\grace\\grace\\AddClient.axaml.cs",
+              "RelativeToolTip": "grace\\AddClient.axaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAowBwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T16:10:50.091Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
