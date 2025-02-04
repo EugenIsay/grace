@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="grace.MakeOrderWindow"
+        x:CompileBindings="False"
+        Title="MakeOrderWindow">
+    <DockPanel LastChildFill="False">
+
+		<AutoCompleteBox DockPanel.Dock="Top"  Name="OrderId"  TextChanged="OrderId_TextChanged"/>
+		
+        <DockPanel DockPanel.Dock="Top">
+			<Button DockPanel.Dock="Right" Name="AddUser" Content="Добавить нового пользователя"></Button>
+            <AutoCompleteBox Name="Client"/>
+        </DockPanel>
+		<AutoCompleteBox DockPanel.Dock="Top" Name="Service" SelectionChanged="Service_OnSelectionChanged" />
+		<TextBlock DockPanel.Dock="Bottom" Name="Cost"></TextBlock>
+		<Button Content="Готово" Name="AddOrder" Click="Button_Click"/>
+        <ListBox Name="ServicesBox" DockPanel.Dock="Top">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                            <TextBlock Text="{Binding Costperhour}"></TextBlock>
+                            <Button Tag="{Binding Id}" Content="Убрать" Click="Delete"></Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+		
+    </DockPanel>
+</Window>

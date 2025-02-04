@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="grace.MainWindow"
+        x:CompileBindings="False"
+        xmlns:local="clr-namespace:grace" 
+        Title="grace">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" ColumnDefinitions="*,*,*">
+            
+            <Button Content="Добавить услугу" IsVisible="{x:Static local:Actions.isSaler}" Name="Add"  Click="Add_OnClick"></Button>
+            <Button Grid.Column="2" Content="Выйти" Name="Exit" Click="Exit_OnClick"></Button>
+        </Grid>
+        <ListBox DockPanel.Dock="Top" Name="Orders">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Grid RowDefinitions="*, 2*">
+                            <TextBlock Text="{Binding  Order.User.FullName}"></TextBlock> 
+                            <ListBox ItemsSource="{Binding Services}" Grid.Row="1" >
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate >
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service.Title}"> </TextBlock>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</Window>
