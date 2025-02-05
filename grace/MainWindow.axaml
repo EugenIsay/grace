@@ -11,6 +11,7 @@
         <Grid DockPanel.Dock="Top" ColumnDefinitions="*,*,*">
             
             <Button Content="Добавить услугу" IsVisible="{x:Static local:Actions.isSaler}" Name="Add"  Click="Add_OnClick"></Button>
+            <TextBlock Name="Time"></TextBlock>
             <Button Grid.Column="2" Content="Выйти" Name="Exit" Click="Exit_OnClick"></Button>
         </Grid>
         <ListBox DockPanel.Dock="Top" Name="Orders">

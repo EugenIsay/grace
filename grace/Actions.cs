@@ -36,4 +36,10 @@ public static class Actions
     {
         Clients = DBContext.Users.Where(u => u.Roleid == 4).ToList();
     }
+
+    public static void UpdateOrder()
+    {
+        orderServices = DBContext.Orderservices.Include(s => s.Service).ToList();
+        orderMaps = DBContext.Orders.Include(o => o.User).Include(o => o.Status).Select(s => new OrderMap{ Order = s }).ToList();
+    }
 }

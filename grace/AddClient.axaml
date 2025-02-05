@@ -7,7 +7,7 @@
         Title="AddClient">
 	<DockPanel>
 		<StackPanel DockPanel.Dock="Top">
-			<TextBlock DockPanel.Dock="" Text="Код"></TextBlock>
+			<TextBlock Text="Код"></TextBlock>
 			<TextBox Name="Code"></TextBox>
 			<TextBlock Text="ФИО"></TextBlock>
 			<Grid ColumnDefinitions="*,*,*">
