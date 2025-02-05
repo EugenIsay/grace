@@ -12,8 +12,12 @@ namespace grace.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "schemagrace");
+
             migrationBuilder.CreateTable(
                 name: "role",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
@@ -27,6 +31,7 @@ namespace grace.Migrations
 
             migrationBuilder.CreateTable(
                 name: "service",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
@@ -42,6 +47,7 @@ namespace grace.Migrations
 
             migrationBuilder.CreateTable(
                 name: "status",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
@@ -55,6 +61,7 @@ namespace grace.Migrations
 
             migrationBuilder.CreateTable(
                 name: "user",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
@@ -77,12 +84,14 @@ namespace grace.Migrations
                     table.ForeignKey(
                         name: "user_role_fk",
                         column: x => x.roleid,
+                        principalSchema: "schemagrace",
                         principalTable: "role",
                         principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
                 name: "order",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
@@ -100,17 +109,20 @@ namespace grace.Migrations
                     table.ForeignKey(
                         name: "order_status_fk",
                         column: x => x.statusid,
+                        principalSchema: "schemagrace",
                         principalTable: "status",
                         principalColumn: "id");
                     table.ForeignKey(
                         name: "order_user_fk",
                         column: x => x.userid,
+                        principalSchema: "schemagrace",
                         principalTable: "user",
                         principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
                 name: "orderservice",
+                schema: "schemagrace",
                 columns: table => new
                 {
                     orderid = table.Column<int>(type: "integer", nullable: false),
@@ -121,42 +133,50 @@ namespace grace.Migrations
                     table.ForeignKey(
                         name: "orderservice_order_fk",
                         column: x => x.orderid,
+                        principalSchema: "schemagrace",
                         principalTable: "order",
                         principalColumn: "id");
                     table.ForeignKey(
                         name: "orderservice_service_fk",
                         column: x => x.serviceid,
+                        principalSchema: "schemagrace",
                         principalTable: "service",
                         principalColumn: "id");
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_order_statusid",
+                schema: "schemagrace",
                 table: "order",
                 column: "statusid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_order_userid",
+                schema: "schemagrace",
                 table: "order",
                 column: "userid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_orderservice_orderid",
+                schema: "schemagrace",
                 table: "orderservice",
                 column: "orderid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_orderservice_serviceid",
+                schema: "schemagrace",
                 table: "orderservice",
                 column: "serviceid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_user_roleid",
+                schema: "schemagrace",
                 table: "user",
                 column: "roleid");
 
             migrationBuilder.CreateIndex(
                 name: "user_unique",
+                schema: "schemagrace",
                 table: "user",
                 column: "code",
                 unique: true);
@@ -166,22 +186,28 @@ namespace grace.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "orderservice");
+                name: "orderservice",
+                schema: "schemagrace");
 
             migrationBuilder.DropTable(
-                name: "order");
+                name: "order",
+                schema: "schemagrace");
 
             migrationBuilder.DropTable(
-                name: "service");
+                name: "service",
+                schema: "schemagrace");
 
             migrationBuilder.DropTable(
-                name: "status");
+                name: "status",
+                schema: "schemagrace");
 
             migrationBuilder.DropTable(
-                name: "user");
+                name: "user",
+                schema: "schemagrace");
 
             migrationBuilder.DropTable(
-                name: "role");
+                name: "role",
+                schema: "schemagrace");
         }
     }
 }

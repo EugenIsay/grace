@@ -38,7 +38,7 @@ public partial class User2Context : DbContext
         {
             entity.HasKey(e => e.Id).HasName("order_pk");
 
-            entity.ToTable("order");
+            entity.ToTable("order", "schemagrace");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Durationinminutes).HasColumnName("durationinminutes");
@@ -63,7 +63,7 @@ public partial class User2Context : DbContext
         {
             entity
                 .HasNoKey()
-                .ToTable("orderservice");
+                .ToTable("orderservice", "schemagrace");
 
             entity.Property(e => e.Orderid).HasColumnName("orderid");
             entity.Property(e => e.Serviceid).HasColumnName("serviceid");
@@ -83,7 +83,7 @@ public partial class User2Context : DbContext
         {
             entity.HasKey(e => e.Id).HasName("role_pk");
 
-            entity.ToTable("role");
+            entity.ToTable("role", "schemagrace");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Name)
@@ -95,7 +95,7 @@ public partial class User2Context : DbContext
         {
             entity.HasKey(e => e.Id).HasName("service_pk");
 
-            entity.ToTable("service");
+            entity.ToTable("service", "schemagrace");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Code)
@@ -111,7 +111,7 @@ public partial class User2Context : DbContext
         {
             entity.HasKey(e => e.Id).HasName("status_pk");
 
-            entity.ToTable("status");
+            entity.ToTable("status", "schemagrace");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Name)
@@ -123,7 +123,7 @@ public partial class User2Context : DbContext
         {
             entity.HasKey(e => e.Id).HasName("user_pk");
 
-            entity.ToTable("user");
+            entity.ToTable("user", "schemagrace");
 
             entity.HasIndex(e => e.Code, "user_unique").IsUnique();
 

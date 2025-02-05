@@ -12,7 +12,7 @@ using grace.Context;
 namespace grace.Migrations
 {
     [DbContext(typeof(User2Context))]
-    [Migration("20250204131908_InitialCreate")]
+    [Migration("20250205162252_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -65,7 +65,7 @@ namespace grace.Migrations
 
                     b.HasIndex("Userid");
 
-                    b.ToTable("order", (string)null);
+                    b.ToTable("order", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.Orderservice", b =>
@@ -82,7 +82,7 @@ namespace grace.Migrations
 
                     b.HasIndex("Serviceid");
 
-                    b.ToTable("orderservice", (string)null);
+                    b.ToTable("orderservice", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.Role", b =>
@@ -102,7 +102,7 @@ namespace grace.Migrations
                     b.HasKey("Id")
                         .HasName("role_pk");
 
-                    b.ToTable("role", (string)null);
+                    b.ToTable("role", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.Service", b =>
@@ -130,7 +130,7 @@ namespace grace.Migrations
                     b.HasKey("Id")
                         .HasName("service_pk");
 
-                    b.ToTable("service", (string)null);
+                    b.ToTable("service", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.Status", b =>
@@ -150,7 +150,7 @@ namespace grace.Migrations
                     b.HasKey("Id")
                         .HasName("status_pk");
 
-                    b.ToTable("status", (string)null);
+                    b.ToTable("status", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.User", b =>
@@ -218,7 +218,7 @@ namespace grace.Migrations
                     b.HasIndex(new[] { "Code" }, "user_unique")
                         .IsUnique();
 
-                    b.ToTable("user", (string)null);
+                    b.ToTable("user", "schemagrace");
                 });
 
             modelBuilder.Entity("grace.Models.Order", b =>

@@ -20,7 +20,7 @@ public partial class MainWindow : Window
 
     public async void StartTimer()
     {
-        time = TimeSpan.FromSeconds(1);
+        time = TimeSpan.FromMinutes(90);
         dispatcherTimer = new DispatcherTimer();
         dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
         dispatcherTimer.Tick += DispatcherTimer_Tick;
@@ -29,17 +29,11 @@ public partial class MainWindow : Window
     }
     private void DispatcherTimer_Tick(object sender, EventArgs e)
     {
-        time.Add(new TimeSpan(0,0,1));
-        Time.Text = time.ToString();
-        if (time <= new TimeOnly(2, 30, 00))
-        {
-            (source as Timer).Stop();
-        }
         if (time == TimeSpan.Zero) dispatcherTimer.Stop();
         else
         { 
             time = time.Add(TimeSpan.FromSeconds(-1));
-            MyTime.Text = time.ToString("c");
+            Time.Text = time.ToString("c");
         }
     }
     
