@@ -7,6 +7,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using grace.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace grace;
 
@@ -23,10 +24,11 @@ public partial class MakeOrderWindow : Window
         Client.ItemsSource = Actions.Clients.Select(c => c.FullName);
         Service.ItemsSource = names;
         ServicesBox.ItemsSource = SelectedServices;
-        OrderId.ItemsSource = (Actions.DBContext.Orders.OrderBy(o => o.Id).Last().Id + 1).ToString();
+        int a = (Actions.DBContext.Orders.OrderBy(o => o.Id).Last().Id + 1);
+        OrderId.ItemsSource = new List<string>() {a.ToString()};
     }
 
-    private void AddService_OnClick(object? sender, RoutedEventArgs e)
+    private void AddClient_OnClick(object? sender, RoutedEventArgs e)
     {
         new AddClient().ShowDialog(this);
         Actions.UpdateClient();
@@ -60,15 +62,16 @@ public partial class MakeOrderWindow : Window
 
     private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (string.IsNullOrEmpty(Client.SelectedItem.ToString()) || string.IsNullOrEmpty(OrderId.Text) || SelectedServices.Count == 0)
+        if (string.IsNullOrEmpty(Client.SelectedItem.ToString()) || string.IsNullOrEmpty(OrderId.Text) || SelectedServices.Count == 0 || Actions.DBContext.Orders.Select(o => o.Id).ToList().Contains(int.Parse(OrderId.Text)))
         {
             return;
         }
+        int id = Actions.Clients.FirstOrDefault(u => u.FullName == Client.SelectedItem.ToString()).Id;
         Actions.DBContext.Orders.Add(new Order()
         {
             Startdate = DateOnly.FromDateTime(DateTime.Now),
             Starttime = TimeOnly.FromDateTime(DateTime.Now),
-            User = Actions.DBContext.Users.FirstOrDefault(u => u.FullName == Client.SelectedItem.ToString()),
+            Userid = id,
             Id = int.Parse(OrderId.Text),
             Statusid = 1
         });

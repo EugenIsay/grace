@@ -29,11 +29,17 @@ public partial class MainWindow : Window
     }
     private void DispatcherTimer_Tick(object sender, EventArgs e)
     {
-        if (time == TimeSpan.Zero) dispatcherTimer.Stop();
+        if (time == TimeSpan.Zero)
+        {
+            dispatcherTimer.Stop();
+            new AuthorizationWindow().Show();
+            this.Close();
+        }
         else
-        { 
+        {
             time = time.Add(TimeSpan.FromSeconds(-1));
             Time.Text = time.ToString("c");
+
         }
     }
     

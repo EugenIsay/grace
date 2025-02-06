@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using System;
+using System.Linq;
 
 namespace grace;
 
@@ -11,7 +12,6 @@ public partial class AddClient : Window
     {
         InitializeComponent();
     }
-
     private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         if (string.IsNullOrEmpty(Name.Text) || string.IsNullOrEmpty(Surname.Text) 
@@ -23,7 +23,8 @@ public partial class AddClient : Window
         Actions.DBContext.Users.Add(new Models.User() { Name = Name.Text, Surname = Surname.Text, 
             Patronimic = Patronim.Text, Address = Addres.Text, Birthday = DateOnly.FromDateTime(BDay.SelectedDate.Value.Date), 
             Code = int.Parse(Code.Text), Email = Email.Text, Password = Password.Text, 
-            Pasportnumber = int.Parse(PNumber.Text), Pasportseries = int.Parse(PSeries.Text), Roleid = 4
+            Pasportnumber = int.Parse(PNumber.Text), Pasportseries = int.Parse(PSeries.Text), Roleid = 4,
+            Id = Actions.DBContext.Users.OrderBy(u => u.Id).Last().Id + 1
         });
         Actions.DBContext.SaveChanges();
         this.Close();

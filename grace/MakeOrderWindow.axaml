@@ -3,20 +3,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		Width="800"
+		Height="450"
         x:Class="grace.MakeOrderWindow"
         x:CompileBindings="False"
         Title="MakeOrderWindow">
     <DockPanel LastChildFill="False">
 
-		<AutoCompleteBox DockPanel.Dock="Top"  Name="OrderId"  TextChanged="OrderId_TextChanged"/>
+		<AutoCompleteBox FilterMode="None"  IsDropDownOpen="True"   DockPanel.Dock="Top"  Name="OrderId"  TextChanged="OrderId_TextChanged"/>
 		
         <DockPanel DockPanel.Dock="Top">
-			<Button DockPanel.Dock="Right" Name="AddUser" Content="Добавить нового пользователя"></Button>
+			<Button DockPanel.Dock="Right" Name="AddUser" Click="AddClient_OnClick" Content="Добавить нового пользователя"></Button>
             <AutoCompleteBox Name="Client"/>
         </DockPanel>
 		<AutoCompleteBox DockPanel.Dock="Top" Name="Service" SelectionChanged="Service_OnSelectionChanged" />
-		<TextBlock DockPanel.Dock="Bottom" Name="Cost"></TextBlock>
-		<Button Content="Готово" Name="AddOrder" Click="Button_Click"/>
+		<Button DockPanel.Dock="Bottom" Content="Готово" Name="AddOrder" Click="Button_Click"/>
+		<TextBlock  DockPanel.Dock="Bottom" Name="Cost"></TextBlock>
         <ListBox Name="ServicesBox" DockPanel.Dock="Top">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>

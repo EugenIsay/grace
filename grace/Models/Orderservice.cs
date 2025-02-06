@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace grace.Models;
-
 public partial class Orderservice
 {
     public int Orderid { get; set; }
