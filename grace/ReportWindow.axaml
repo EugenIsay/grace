@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="grace.ReportWindow"
+        xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+        xmlns:vms="using:ViewModelsSamples.StackedArea.Basic;"
+        Title="ReportWindow">
+        <Grid ColumnDefinitions="*,*,*">
+                <StackPanel Name="MainPanel">
+                        <RadioButton IsChecked="True" Click="Button_OnClick" Content="По дням" Name="ByDays" GroupName="First Group">
+                                
+                        </RadioButton>
+                        <RadioButton Click="Button_OnClick" Content="По услугам" Name="ByServise" GroupName="First Group">
+                                
+                        </RadioButton>
+                        <Calendar VerticalAlignment="Center" Name="Calendar" SelectionMode="SingleRange" SelectedDatesChanged="Calendar_OnSelectedDatesChanged"> </Calendar>
+                </StackPanel>
+                <lvc:CartesianChart Grid.Column="1" EasingFunction="{x:Null}"  AnimationsSpeed="0" FontStyle="Oblique" Grid.Row="0" Name="MainChart">
+
+                </lvc:CartesianChart>
+                <DataGrid AutoGenerateColumns="True" Grid.Column="2" Name="Table">
+                </DataGrid>
+        </Grid>
+
+</Window>

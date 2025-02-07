@@ -55,4 +55,9 @@ public partial class MainWindow : Window
         new AuthorizationWindow().Show();
         this.Close();
     }
+
+    private void Report_OnClick(object? sender, RoutedEventArgs e)
+    {
+        new ReportWindow().ShowDialog(this);
+    }
 }

@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media.Imaging;
 using grace.Models;
 using Microsoft.EntityFrameworkCore;
+using QRCoder;
 
 namespace grace;
 
@@ -16,8 +19,7 @@ public partial class MakeOrderWindow : Window
     List<Service> Services = Actions.DBContext.Services.ToList();
     ObservableCollection<string> names = new ObservableCollection<string>(Actions.DBContext.Services.Select(s => s.Title).ToList());
     ObservableCollection<Service> SelectedServices = new ObservableCollection<Service>();
-
-
+    
     public MakeOrderWindow()
     {
         InitializeComponent();
@@ -80,7 +82,19 @@ public partial class MakeOrderWindow : Window
             Actions.DBContext.Orderservices.Add(new Orderservice() { Orderid = int.Parse(OrderId.Text), Serviceid = service.Id });
         }
         Actions.DBContext.SaveChanges();
-        new MainWindow().Show();
         this.Close();
+    }
+
+    private void Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+        using (QRCodeData qrCodeData = qrGenerator.CreateQrCode($"{OrderId.Text}{DateTime.Now.Date}", QRCodeGenerator.ECCLevel.Q))
+        using (PngByteQRCode qrCode = new PngByteQRCode(qrCodeData))
+        {
+            byte[] qrCodeImage = qrCode.GetGraphic(20);
+            Bitmap qrcode = new Bitmap(new MemoryStream(qrCodeImage));
+            
+            (ShtrihImage as Image).Source = qrcode;
+        }
     }
 }

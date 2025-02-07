@@ -61,10 +61,10 @@ public partial class User2Context : DbContext
 
         modelBuilder.Entity<Orderservice>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("orderservice", "schemagrace");
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.ToTable("orderservice", "schemagrace");
 
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Orderid).HasColumnName("orderid");
             entity.Property(e => e.Serviceid).HasColumnName("serviceid");
 

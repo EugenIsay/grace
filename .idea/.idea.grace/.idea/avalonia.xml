@@ -4,9 +4,11 @@
     <option name="projectPerEditor">
       <map>
         <entry key="grace/AddClient.axaml" value="grace/grace.csproj" />
+        <entry key="grace/App.axaml" value="grace/grace.csproj" />
         <entry key="grace/AuthorizationWindow.axaml" value="grace/grace.csproj" />
         <entry key="grace/MainWindow.axaml" value="grace/grace.csproj" />
         <entry key="grace/MakeOrderWindow.axaml" value="grace/grace.csproj" />
+        <entry key="grace/ReportWindow.axaml" value="grace/grace.csproj" />
       </map>
     </option>
   </component>

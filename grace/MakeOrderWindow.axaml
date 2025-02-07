@@ -9,8 +9,13 @@
         x:CompileBindings="False"
         Title="MakeOrderWindow">
     <DockPanel LastChildFill="False">
+        <Grid DockPanel.Dock="Top" ColumnDefinitions="3*,*">
+            <AutoCompleteBox FilterMode="None"  IsDropDownOpen="True"   DockPanel.Dock="Top"  Name="OrderId"  TextChanged="OrderId_TextChanged"/>    
+            <Button Grid.Column="1" Content="Штрих-код" Click="Button_OnClick">
 
-		<AutoCompleteBox FilterMode="None"  IsDropDownOpen="True"   DockPanel.Dock="Top"  Name="OrderId"  TextChanged="OrderId_TextChanged"/>
+            </Button>
+        </Grid>
+        
 		
         <DockPanel DockPanel.Dock="Top">
 			<Button DockPanel.Dock="Right" Name="AddUser" Click="AddClient_OnClick" Content="Добавить нового пользователя"></Button>
@@ -38,6 +43,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         
+        <Image Name="ShtrihImage" DockPanel.Dock="Right"></Image>
 		
     </DockPanel>
 </Window>
